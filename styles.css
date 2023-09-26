@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Mooli&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:#222242;
+    font-family:'Mooli', sans-serif;;
+}
+
+.stopwatch{
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    background-color: #2267;
+    /* linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)); */
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    padding: 40px 0;
+    color: #fff;
+    margin: 200px auto 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.8);
+    border-radius: 20px;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* z-index: -1; */
+}
+
+@keyframes shine {
+
+    0%,
+    100% {
+        box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, .5);
+    }
+
+    50% {
+        box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, .5);
+    }
+}
+
+.stopwatch h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 64px;
+    font-weight: 300;
+}
+
+button {
+    background-color: #222242;
+    padding: 10px 38px;
+    border: 1px solid #A9A9A9;
+    border-radius: 28px;
+    color: #fff;
+    transition: all .2s ease;
+    outline: 0;
+}
+
+button:hover{
+    background-color: #74af7e;
+    cursor: pointer;
+}
