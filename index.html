@@ -4,21 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
+    <title>TaskWatch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <div class="stopwatch">
-        <h1 id="displayTime">00:00:00</h1>
-        <div class="buttons">
-            <button class="btn-start" onclick="watchStart()">Start</button>
-            <button class="btn-stop" onclick="watchStop()">Stop</button>
-            <button class="btn-reset" onclick="watchReset()">Reset</button>
+    <div class="container">
+        <div class="todo-app">
+            <h2>name</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your task" />
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- Task will be added -->
+            </ul>
         </div>
-    </div>
+        
+        <!-- <div class="stopwatch">
+                <h1 id="displayTime">00:00:00</h1>
+                <div class="buttons">
+                    <button class="btn-start" onclick="watchStart()">Start</button>
+                    <button class="btn-stop" onclick="watchStop()">Stop</button>
+                    <button class="btn-reset" onclick="watchReset()">Reset</button>
+                </div>
+            </div>
 
+    </div> -->
+    
     <script src="script.js"></script>
 
 
