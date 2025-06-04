@@ -1,0 +1,49 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: rhel-latest
+
+steps:
+- task: oc-cmd@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift Cluster'
+    version: '4.17'
+    cmd: 'oc project test1'
+- task: oc-cmd@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift Cluster'
+    version: '4.17'
+    cmd: 'oc project oc new-app https://github.com/siyugg/TaskWatch.git'
+
+- task: oc-cmd@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift Cluster'
+    version: '4.17'
+    cmd: 'oc expose svc TaskWatch'
+- task: oc-cmd@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift Cluster'
+    version: '4.17'
+    cmd: 'oc start-build TaskWatch --follow'
+- task: oc-cmd@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift Cluster'
+    version: '4.17'
+    cmd: 'oc status'
+  
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
