@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: rhel-latest
+  vmImage: ubuntu-latest
 
 steps:
 - task: oc-cmd@3
