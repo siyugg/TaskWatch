@@ -21,7 +21,7 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'OpenShift Cluster'
     version: '4.17'
-    cmd: 'oc project oc new-app https://github.com/siyugg/TaskWatch.git'
+    cmd: 'oc new-app https://github.com/siyugg/TaskWatch.git'
 
 - task: oc-cmd@3
   inputs:
