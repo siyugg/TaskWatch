@@ -1,0 +1,23 @@
+{
+  "name": "taskwatch",
+  "version": "1.0.0",
+  "description": "a stopwatch timer to track tasks",
+  "homepage": "https://github.com/siyugg/TaskWatch#readme",
+  "bugs": {
+    "url": "https://github.com/siyugg/TaskWatch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siyugg/TaskWatch.git"
+  },
+  "license": "MIT",
+  "author": "siyugg",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
